@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "c400g-ptz"
+version = "0.1.2"
+description = "ipTIME C400G ONVIF PTZ control wrapper"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["iptime", "c400g", "onvif", "ptz", "camera", "ipcam"]
+license = { text = "MIT" }
+authors = [
+  { name = "wonjj6768", email = "wonjj6768@gmail.com" },
+]
+
+dependencies = [
+  "onvif-zeep>=0.2.12",
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Home Automation",
+]
+
+[project.urls]
+Homepage = "https://github.com/wonjj6768/c400g-ptz"
+Repository = "https://github.com/wonjj6768/c400g-ptz"
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "README.md", "LICENSE"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/c400g_ptz"]
